@@ -1,0 +1,9 @@
+{
+	"version": "1.0.0",
+	"browser":
+	{
+		"type":  "Google Chrome",
+		"title": "Gnosis",
+		"host":  "http://localhost:3000/game/"
+	}
+}
