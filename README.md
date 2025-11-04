@@ -158,48 +158,6 @@ shape.draw('myCanvas');
 
 ---
 
-## 🏗 Development
-
-Juice provides a **custom build system** written entirely in Bash to manage project compilation, minification, and live development.
-
-| File | Purpose |
-|------|----------|
-| **`compile.sh`** | Compiles and minifies the full Juice framework. |
-| **`watch.sh`** | Watches `/script/source` for file changes and automatically recompiles. |
-| **`settings.json`** | Holds project version info and browser reload settings. |
-
-### Prerequisites
-| Tool | Install |
-|------|----------|
-| Bash 3.2.57+ | _(preinstalled)_ |
-| Node.js + npm | `brew install node` |
-| UglifyJS | `npm install -g uglify-js` |
-| fswatch | `brew install fswatch` |
-
-### Build
-```bash
-cd build
-bash compile.sh
-```
-
-### Watch
-```bash
-cd build
-bash watch.sh
-```
-
-### Configuration
-Edit `build/settings.json` to update version and browser info.
-
-### Troubleshooting
-| Issue | Fix |
-|-------|-----|
-| Missing `fswatch` | `brew install fswatch` |
-| Missing `uglifyjs` | `npm install -g uglify-js` |
-| Permission denied | `chmod +x build/*.sh` |
-
----
-
 ## 🧬 Architecture
 
 Juice is built around modular, reusable classes such as:
@@ -239,6 +197,48 @@ This consistent structure allows every component to **speak the same design lang
 ---
 
 It provides a unified architecture for shapes, collections, gradients, shadows, and effects — everything you need to build dynamic, procedural, or generative art with ease.
+
+---
+
+## 🏗 Development
+
+Juice provides a **custom build system** written entirely in Bash to manage project compilation, minification, and live development.
+
+| File | Purpose |
+|------|----------|
+| **`compile.sh`** | Compiles and minifies the full Juice framework. |
+| **`watch.sh`** | Watches `/script/source` for file changes and automatically recompiles. |
+| **`settings.json`** | Holds project version info and browser reload settings. |
+
+### Prerequisites
+| Tool | Install |
+|------|----------|
+| Bash 3.2.57+ | _(preinstalled)_ |
+| Node.js + npm | `brew install node` |
+| UglifyJS | `npm install -g uglify-js` |
+| fswatch | `brew install fswatch` |
+
+### Build
+```bash
+cd build
+bash compile.sh
+```
+
+### Watch
+```bash
+cd build
+bash watch.sh
+```
+
+### Configuration
+Edit `build/settings.json` to update version and browser info.
+
+### Troubleshooting
+| Issue | Fix |
+|-------|-----|
+| Missing `fswatch` | `brew install fswatch` |
+| Missing `uglifyjs` | `npm install -g uglify-js` |
+| Permission denied | `chmod +x build/*.sh` |
 
 ## Support
 Please [open an issue](https://github.com/Justin-Byrne/Juice/issues/new) for support.

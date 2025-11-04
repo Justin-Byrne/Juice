@@ -4,6 +4,6 @@
 	{
 		"type":  "Google Chrome",
 		"title": "Gnosis",
-		"host":  "http://localhost:3000/game/"
+		"host":  "http://localhost:3000/project/"
 	}
 }

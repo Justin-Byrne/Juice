@@ -3,7 +3,7 @@
 // @author:         Justin D. Byrne
 // @email:          justin@byrne-systems.com
 // @version:        1.0.0
-// @date:           2025.10.26
+// @date:           2025.10.27
 // @license:        GPL-2.0
 
 "use strict";

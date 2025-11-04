@@ -23,8 +23,8 @@ readonly DATE="$(date +%Y.%m.%d)"
 # Path Configuration
 readonly INPUT_FOLDER="${ROOT_DIR}/script/source"
 readonly OUTPUT_DIRECTORY="${ROOT_DIR}/script/distro"
-OUTPUT_FILE="${OUTPUT_DIRECTORY}/juice.js"
-OUTPUT_MIN="${OUTPUT_DIRECTORY}/juice.min.js"
+OUTPUT_FILE="${OUTPUT_DIRECTORY}/${VC_PACKAGE}.js"
+OUTPUT_MIN="${OUTPUT_DIRECTORY}/${VC_PACKAGE}.min.js"
 
 # Build Options
 readonly OMIT_INCLUDE="${OMIT_INCLUDE:-false}"
@@ -220,8 +220,8 @@ initialize_build() {
     get_version_from_settings
 
     # Redeclare output files with version number
-    OUTPUT_FILE="${OUTPUT_DIRECTORY}/juice-v${VERSION}.js"
-    OUTPUT_MIN="${OUTPUT_DIRECTORY}/juice-v${VERSION}.min.js"
+    OUTPUT_FILE="${OUTPUT_DIRECTORY}/${VC_PACKAGE}-v${VERSION}.js"
+    OUTPUT_MIN="${OUTPUT_DIRECTORY}/${VC_PACKAGE}-v${VERSION}.min.js"
 
     # Clear all files from output directory
     rm -f "${OUTPUT_DIRECTORY}"/*
@@ -441,11 +441,13 @@ create_minified() {
     fi
 
     log_info "Running uglifyjs compression..."
+
     if uglifyjs "$OUTPUT_FILE" --source-map -o "$OUTPUT_MIN" --compress --mangle reserved=['window','_instance'] 2>/dev/null; then
         log_success "Uglification successful!"
 
         # Add preamble to minified version
         local temp_file="${OUTPUT_MIN}.tmp"
+
         if {
             generate_preamble
             cat "$OUTPUT_MIN"
