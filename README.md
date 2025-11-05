@@ -85,12 +85,12 @@ Create smooth, colorful transitions between two hues:
 
 ```js
 const gradient = new Linear(
-  new Point(0, 0),
-  new Point(200, 200),
-  [
-    new Stop(new Rgb(255, 0, 100), 0),
-    new Stop(new Rgb(0, 150, 255), 1)
-  ]
+    new Point(0, 0),
+    new Point(200, 200),
+    [
+        new Stop(new Rgb(255, 0, 100), 0),
+        new Stop(new Rgb(0, 150, 255), 1)
+    ]
 );
 
 const rect = new Rectangle(new Point(50, 50), new Aspect(200, 200));
@@ -111,11 +111,11 @@ const circles = new Circles();
 
 for (let i = 0; i < 5; i++)
 {
-  const circle = new Circle(new Point(50 + i * 60, 150), 25);
+    const circle = new Circle(new Point(50 + i * 60, 150), 25);
 
-  circle.fill.color = new Rgb(100 + i * 30, 150, 255 - i * 40);
+    circle.fill.color = new Rgb(100 + i * 30, 150, 255 - i * 40);
 
-  circles.push(circle);
+    circles.push(circle);
 }
 
 circles.draw('myCanvas');
@@ -135,14 +135,14 @@ ball.fill.color = new Rgb(255, 200, 0);
 
 function animate()
 {
-  const ctx = document.getElementById('myCanvas').getContext('2d');
+    const ctx = document.getElementById('myCanvas').getContext('2d');
 
-  ctx.clearRect(0, 0, 600, 400);
+    ctx.clearRect(0, 0, 600, 400);
 
-  ball.move(2, 3);   // Move 2° forward by 3 units
-  ball.draw('myCanvas');
+    ball.move(2, 3);   // Move 2° forward by 3 units
+    ball.draw('myCanvas');
 
-  requestAnimationFrame(animate);
+    requestAnimationFrame(animate);
 }
 
 animate();
@@ -155,13 +155,13 @@ Experiment with expressive rendering styles:
 
 ```js
 const conic = new Conic(
-  Math.PI / 3,
-  new Point(150, 150),
-  [
-    new Stop(new Rgb(255, 0, 0), 0),
-    new Stop(new Rgb(0, 255, 0), 0.5),
-    new Stop(new Rgb(0, 0, 255), 1)
-  ]
+    Math.PI / 3,
+    new Point(150, 150),
+    [
+        new Stop(new Rgb(255, 0, 0), 0),
+        new Stop(new Rgb(0, 255, 0), 0.5),
+        new Stop(new Rgb(0, 0, 255), 1)
+    ]
 );
 
 const shape = new Circle(new Point(150, 150), 80);
