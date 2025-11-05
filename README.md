@@ -93,7 +93,7 @@ const gradient = new Linear(
   ]
 );
 
-const rect         = new Rectangle(new Point(50, 50), new Aspect(200, 200));
+const rect = new Rectangle(new Point(50, 50), new Aspect(200, 200));
 
 rect.fill.type     = 'linear';
 rect.fill.gradient = gradient;
@@ -111,7 +111,8 @@ const circles = new Circles();
 
 for (let i = 0; i < 5; i++)
 {
-  const circle      = new Circle(new Point(50 + i * 60, 150), 25);
+  const circle = new Circle(new Point(50 + i * 60, 150), 25);
+
   circle.fill.color = new Rgb(100 + i * 30, 150, 255 - i * 40);
 
   circles.push(circle);
@@ -129,6 +130,7 @@ Bring your shapes to life with a few simple calls:
 
 ```js
 const ball = new Circle(new Point(100, 200), 20);
+
 ball.fill.color = new Rgb(255, 200, 0);
 
 function animate()
@@ -162,7 +164,7 @@ const conic = new Conic(
   ]
 );
 
-const shape         = new Circle(new Point(150, 150), 80);
+const shape = new Circle(new Point(150, 150), 80);
 
 shape.fill.type     = 'conic';
 shape.fill.gradient = conic;
@@ -196,7 +198,9 @@ This consistent structure allows every component to **speak the same design lang
 2. **Create your first object**
    ```js
    const rect = new Rectangle(new Point(100, 100), new Aspect(200, 100));
+
    rect.fill.color = new Rgb(0, 150, 255);
+
    rect.draw('myCanvas');
    ```
 3. **Experiment and expand** — combine objects, animate them, or generate procedural art.
