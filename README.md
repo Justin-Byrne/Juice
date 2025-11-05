@@ -63,15 +63,15 @@ Here's how simple it is to start creating with Juice:
 
 ```js
 // Create a circle
-const circle = new Circle(new Point(150, 150), 50);
+const circle = new Circle ( new Point ( 150, 150 ), 50 );
 
 // Style it
-circle.fill.color = new Rgb(255, 100, 100);
-circle.stroke.color = new Rgb(30, 30, 30);
+circle.fill.color   = new Rgb ( 255, 100, 100 );
+circle.stroke.color = new Rgb ( 30, 30, 30 );
 circle.stroke.width = 2;
 
 // Draw it to the canvas
-circle.draw('myCanvas');
+circle.draw ( 'myCanvas' );
 ```
 
 Juice automatically manages your canvas context, making it easy to **focus on creativity, not configuration**.
@@ -84,17 +84,17 @@ Juice automatically manages your canvas context, making it easy to **focus on cr
 Create smooth, colorful transitions between two hues:
 
 ```js
-const gradient = new Linear(
-  new Point(0, 0),
-  new Point(200, 200),
-  [new Stop(new Rgb(255, 0, 100), 0), new Stop(new Rgb(0, 150, 255), 1)]
+const gradient = new Linear (
+  new Point ( 0, 0 ),
+  new Point ( 200, 200 ),
+  [ new Stop ( new Rgb(255, 0, 100 ), 0 ), new Stop ( new Rgb ( 0, 150, 255 ), 1 ) ]
 );
 
-const rect = new Rectangle(new Point(50, 50), new Aspect(200, 200));
-rect.fill.type = 'linear';
+const rect         = new Rectangle ( new Point ( 50, 50 ), new Aspect ( 200, 200 ) );
+rect.fill.type     = 'linear';
 rect.fill.gradient = gradient;
 
-rect.draw('myCanvas');
+rect.draw ( 'myCanvas' );
 ```
 
 ---
@@ -103,13 +103,16 @@ rect.draw('myCanvas');
 Group and manage multiple objects as a single collection:
 
 ```js
-const circles = new Circles();
-for (let i = 0; i < 5; i++) {
-  const c = new Circle(new Point(50 + i * 60, 150), 25);
-  c.fill.color = new Rgb(100 + i * 30, 150, 255 - i * 40);
-  circles.push(c);
+const circles = new Circles ( );
+
+for ( let i = 0; i < 5; i++ )
+{
+  const circle = new Circle ( new Point ( 50 + i * 60, 150 ), 25 );
+  circle.fill.color = new Rgb ( 100 + i * 30, 150, 255 - i * 40 );
+  circles.push ( circle );
 }
-circles.draw('myCanvas');
+
+circles.draw ( 'myCanvas' );
 ```
 
 Collections make it easy to **clone, transform, or animate** entire groups at once.
@@ -120,18 +123,22 @@ Collections make it easy to **clone, transform, or animate** entire groups at on
 Bring your shapes to life with a few simple calls:
 
 ```js
-const ball = new Circle(new Point(100, 200), 20);
-ball.fill.color = new Rgb(255, 200, 0);
+const ball = new Circle ( new Point ( 100, 200 ), 20 );
+ball.fill.color = new Rgb ( 255, 200, 0 );
 
-function animate() {
-  const ctx = document.getElementById('myCanvas').getContext('2d');
-  ctx.clearRect(0, 0, 600, 400);
-  ball.move(2, 3);   // Move 2° forward by 3 units
-  ball.draw('myCanvas');
-  requestAnimationFrame(animate);
+function animate ( )
+{
+  const ctx = document.getElementById ( 'myCanvas' ).getContext ( '2d' );
+
+  ctx.clearRect ( 0, 0, 600, 400 );
+
+  ball.move ( 2, 3 );   // Move 2° forward by 3 units
+  ball.draw ( 'myCanvas' );
+
+  requestAnimationFrame ( animate );
 }
 
-animate();
+animate (  );
 ```
 
 ---
@@ -140,20 +147,21 @@ animate();
 Experiment with expressive rendering styles:
 
 ```js
-const conic = new Conic(
+const conic = new Conic (
   Math.PI / 3,
-  new Point(150, 150),
+  new Point ( 150, 150 ),
   [
-    new Stop(new Rgb(255, 0, 0), 0),
-    new Stop(new Rgb(0, 255, 0), 0.5),
-    new Stop(new Rgb(0, 0, 255), 1)
+    new Stop ( new Rgb ( 255, 0, 0 ), 0 ),
+    new Stop ( new Rgb ( 0, 255, 0 ), 0.5 ),
+    new Stop ( new Rgb ( 0, 0, 255 ), 1 )
   ]
 );
 
-const shape = new Circle(new Point(150, 150), 80);
-shape.fill.type = 'conic';
+const shape         = new Circle ( new Point ( 150, 150 ), 80 );
+shape.fill.type     = 'conic';
 shape.fill.gradient = conic;
-shape.draw('myCanvas');
+
+shape.draw ( 'myCanvas' );
 ```
 
 ---
@@ -181,9 +189,9 @@ This consistent structure allows every component to **speak the same design lang
    ```
 2. **Create your first object**
    ```js
-   const rect = new Rectangle(new Point(100, 100), new Aspect(200, 100));
-   rect.fill.color = new Rgb(0, 150, 255);
-   rect.draw('myCanvas');
+   const rect      = new Rectangle ( new Point ( 100, 100 ), new Aspect ( 200, 100 ) );
+   rect.fill.color = new Rgb ( 0, 150, 255 );
+   rect.draw ( 'myCanvas' );
    ```
 3. **Experiment and expand** — combine objects, animate them, or generate procedural art.
 
