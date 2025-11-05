@@ -1,6 +1,6 @@
-# ![Juice](https://github.com/Justin-Byrne/Juice/blob/main/assets/images/juice-logo-small.png)
+# ![Juice](https://github.com/Justin-Byrne/Juice/blob/main/assets/images/logo/juice_logo-small.png)
 ![license](https://img.shields.io/github/license/Justin-Byrne/Juice?style=flat-square)
-<img src="https://img.shields.io/badge/Chrome-141.0.7390.123-yellow?style=flat-square&logo=googlechrome&logoColor=white" />
+<img src="https://img.shields.io/badge/Chrome-142.0.7444.60-yellow?style=flat-square&logo=googlechrome&logoColor=white" />
 ![issues](https://img.shields.io/github/issues/Justin-Byrne/Juice?style=flat-square)
 <img src="https://img.shields.io/github/languages/code-size/Justin-Byrne/Juice?style=flat-square" />
 
@@ -351,7 +351,7 @@ Please [open an issue](https://github.com/Justin-Byrne/Juice/issues/new) for sup
 
 
 ## Copyright
-![Byrne-Systems](https://github.com/Justin-Byrne/Juice/blob/main/assets/images/cube_sm.png)
+![Byrne-Systems](https://github.com/Justin-Byrne/Juice/blob/main/assets/images/logo/cube-small.png)
 
 
 = Byrne-Systems © 2025 - All rights reserved. =
